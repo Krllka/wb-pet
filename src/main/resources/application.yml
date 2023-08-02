@@ -1,0 +1,22 @@
+server:
+  port: ${PORT:8080}
+  error:
+    whitelabel:
+      enabled: true
+
+spring:
+  datasource:
+    username: 'postgres'
+    password: 'postgres'
+    url: jdbc:postgresql://172.24.176.1:5432/wb-db
+    driver-class-name: 'org.postgresql.Driver'
+
+  jpa:
+    database-platform: 'org.hibernate.dialect.PostgreSQLDialect'
+    hibernate:
+      ddl-auto: 'validate'
+    show-sql: true
+    open-in-view: true
+
+
+
