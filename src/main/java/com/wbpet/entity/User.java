@@ -1,21 +1,25 @@
 package com.wbpet.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 @Entity
+@Getter
+@Setter
 @Table(name = "usr_user")
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class User extends BaseEntity {
+public final class User extends BaseEntity {
 
     @Column(name = "str_login", unique = true)
     private String login;
     @Column(name = "str_email", unique = true)
     private String email;
+
 }
